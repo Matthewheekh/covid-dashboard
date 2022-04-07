@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Covid statistics</title>
+</head>
+
+<body>
+    <div class="page-content">
+        <div class="mdl-grid"></div>
+        <div class="mdl-grid center">
+            <div class="header">
+                <div class="header-left">
+                    <button class="return-button">
+                        <a href="interface.html">
+                            Dashboard
+                        </a>
+                    </button>
+                </div>
+                <div class="header-text">
+                    <h1>Admin Page</h1>
+                    <p>Users Information</p>
+                </div>
+            </div>
+        </div>
+        <div class="mdl-grid">
+            <div id="superuser-page">
+                <div class="mdl-grid" id="table-information">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script type="module">
+        // Initialize Firebase
+        const config = {
+            apiKey: "AIzaSyAjSZ5jNWzV9WBLVv63qyPlYTSZ4pxUK8s",
+            authDomain: "fit2101-e319d.firebaseapp.com",
+            databaseURL: "https://fit2101-e319d-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "fit2101-e319d",
+            storageBucket: "fit2101-e319d.appspot.com",
+            messagingSenderId: "743690137634",
+            appId: "1:743690137634:web:bffccba2bdf9a5c7f0da7b",
+            measurementId: "G-KQ8VDZWPJK"
+        };
+        firebase.initializeApp(config);
+        window.onload = displayUsersData;
+    </script>
+    <script src="js/usersdata.js"></script>
+</body>
+
+</html>

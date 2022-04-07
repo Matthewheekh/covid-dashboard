@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="subpages.css">
+    <meta charset="UTF-8" />
+    <title>Covid statistics</title>
+    <link href="./map-style.css"  rel="stylesheet" type="text/css"/>
+    <script src="./jquery.min.js"></script>
+    <script src="./map-config.js"></script>
+    <script src="./map-interact.js"></script>
+    <script src="./pins-config.js"></script>
+</head>
+
+<body>
+    <div>
+        <div id="dashboard">
+
+            <!--Wondering if this works-->
+            <div id="left-dashboard">
+                <div id="new-cases-widget">
+                    <p>South America's new total cases</p>
+                    <h1 id="world-total-cases"></h1>
+                </div>
+                <div id="fully-vax-widget", style="position:relative; width:300px; height:300px;">
+                    <canvas id="donut-graph"></canvas>
+                </div>
+            </div>
+
+            <div id="middle-dashboard">
+                <div id="chart1", style="position:relative; width:400px; height:300px;">
+                    <canvas id="myChart1"></canvas>
+                </div>
+                <div id="chart2", style="position:relative; width:400px; height:300px;">
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+                
+
+            <div id="right-dashboard">
+                <div id="chart3", style="position:relative; width:400px; height:300px;">
+                    <canvas id="myChart3"></canvas>
+                </div>
+                <div id="chart4", style="position:relative; width:400px; height:300px;">
+                    <canvas id="myChart4"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <button class="return-button">
+                <a href="interface.html">
+                    Back
+                </a>
+            </button>
+        </div>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script type = "module">
+        // Initialize Firebase
+        const config = {
+            apiKey: "AIzaSyAjSZ5jNWzV9WBLVv63qyPlYTSZ4pxUK8s",
+            authDomain: "fit2101-e319d.firebaseapp.com",
+            databaseURL: "https://fit2101-e319d-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "fit2101-e319d",
+            storageBucket: "fit2101-e319d.appspot.com",
+            messagingSenderId: "743690137634",
+            appId: "1:743690137634:web:bffccba2bdf9a5c7f0da7b",
+            measurementId: "G-KQ8VDZWPJK"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script>"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"</script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/index.js"></script>
+    <script src="js/SouthAmerica.js"></script>
+
+    
+
+     
+</body>
